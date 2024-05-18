@@ -32,6 +32,7 @@ header{
 }
 
 .container{
+    text-align: center;
     padding: 5vh 0vw;
     max-height: 70vh;
     width: 50vw;
@@ -41,6 +42,13 @@ header{
     flex-direction: column;
     justify-content: center;
     background-color: var(--color5);
+}
+
+#container_title{
+    color: var(--color2);
+    font-size: 2vw;
+    font-weight: bold;
+    margin: 1vw auto;
 }
 
 .container input{

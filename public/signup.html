@@ -9,18 +9,19 @@
     @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;600;700&display=swap');
     </style>
 <link rel="stylesheet" href="css/index.css">
-<script defer src="./js/logic.js"></script>
+<script defer src="./js/signup.js"></script>
 <body>
     <header>
         <img src="./requirements/logo.png" alt="appLogo" id="logo">
         <h1>TrimLink</h1>
     </header>
     <main>
-        <form action="" method="post" id="login_form">
+        <form action="/newaction" method="post" id="login_form">
             <div class="container">
-                <input class="input" type='text' placeholder="Username" name="userName" required>
-                <input class="input" type='email' placeholder="Email id" name="emailId" required>
-                <input class="input" type="password" placeholder="password" name="passWord" required>
+                <span id="container_title">Sign up</span>
+                <input class="input" type='text' placeholder="Username" name="userName" >
+                <input class="input" type='email' placeholder="Email id" name="emailId" >
+                <input class="input" type="password" placeholder="password" name="passWord">
                 <div class="buttons">
                     <button type="submit" id="signup_btn">Sign up</button>
                     <button type="submit" id="login_btn">Login</button>
