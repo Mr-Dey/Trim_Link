@@ -1,10 +1,16 @@
+//Dependency
 const express = require('express');
 const mongoose=require('mongoose');
+const path=require('path');
+const hbs=require('hbs');
 
+//routes
 const signup=require('./route/signup');
 const login=require('./route/login');
 const adduser=require('./route/adduser');
+const verifyLogin=require('./route/verifyLogin');
 
+//database Schema
 const userSchema=require('./model/usersSchema');
 
 
@@ -21,6 +27,13 @@ mongoose.connect(url)
 })
 
 const app=express()
+app.use(express.static(path.join(__dirname, 'public')));
+
+//viewengine
+const viewsPath=path.join(__dirname,'/views');
+app.set("view engine","hbs");
+app.set('views',viewsPath);
+
 
 //for parshing req with json paylode in req.body
 app.use(express.json());
@@ -29,16 +42,16 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 //Handeler
-app.use(express.static(__dirname+'/public'));
+
 app.use("/signup",signup);
 app.use("/login",login);
 app.use('/adduser',adduser);
+app.use('/verifyLogin',verifyLogin);
 
 
 //fortest
-app.get("/test",async(req,res)=>{
-    let jsons=await userSchema.find();
-    res.send(jsons);
+app.get("/test",(req,res)=>{
+    res.render('status',{status:"This is working"});
 })
 
 app.listen('3000',()=>{

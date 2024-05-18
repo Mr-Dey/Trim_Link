@@ -18,7 +18,7 @@ adduser.post("/",async(req,res)=>{
         console.log(result);
     }catch(e){
         if(e.code===11000){
-            res.sendFile(path.join(__dirname,'..','public','duplicate_email.html'));
+            res.render('status',{status:"Email address is already registered. Please login."});
         }
     }
 })
