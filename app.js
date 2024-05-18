@@ -3,6 +3,9 @@ const mongoose=require('mongoose');
 
 const signup=require('./route/signup');
 const login=require('./route/login');
+const adduser=require('./route/adduser');
+
+const userSchema=require('./model/usersSchema');
 
 
 //database url
@@ -27,14 +30,18 @@ app.use(express.json());
 //for URL-encoded payloads req.body
 app.use(express.urlencoded({extended:true}));
 
-//default handler
+//Handeler
 app.use(express.static(__dirname+'/public'));
-
-
-//handle /signup
 app.use("/signup",signup);
 app.use("/login",login);
+app.use('/adduser',adduser);
 
+
+//fortest
+app.get("/test",async(req,res)=>{
+    let jsons=await userSchema.find();
+    res.send(jsons);
+})
 
 app.listen('3000',()=>{
     console.log("Running!");
