@@ -1,0 +1,98 @@
+:root{
+    --color1:#edc7b7;
+    --color2:#eee2dcb7;
+    --color3:#bab2b5;
+    --color4:#123c69;
+    --color5:#ac3b61;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    scrollbar-width: none;
+}
+
+header{
+    display: flex;
+    align-items: center; 
+    height: 10vh;
+    background-color: var(--color1);
+    color: var(--color5);
+}
+#logo{
+    width: 5vw;
+}
+
+
+
+/* dashboard */
+.container{
+    height: 80vh;
+    background-color:var(--color2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.generate{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color5);
+    height: 15vh;
+    width: 65vw;
+    border-radius: 2vw;
+    padding: 0vh 5vw;
+}
+
+.generate input{
+    width: 55vw;
+    height: 5vh;
+    padding: 1vh 1vw;
+    font-size: 1vw;
+    border: none;
+    border-radius: 1vw;
+    outline: none;
+}
+.generate button{
+    font-size: 1vw;
+    padding: 2vh 1vw;
+    border-radius: 1vw;
+    outline: none;
+    border: none;
+}
+
+.container .table{
+
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    text-align: center;
+    font-size: 1vw;
+    margin: 5vh auto;
+    border-radius: 2vw;
+    width: 80vw;
+    background-color: var(--color4);
+    color: var(--color2);
+    overflow-x: auto;
+}
+.container table{
+    width: 50vw;
+}
+
+.container table td{
+    background-color: var(--color5);
+    /* margin: 2vh 5vw; */
+}
+
+
+
+
+
+footer{
+    height: 10vh;
+    background-color: var(--color2);
+    text-align: center;
+}
