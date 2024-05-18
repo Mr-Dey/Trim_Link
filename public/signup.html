@@ -9,15 +9,16 @@
     @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;600;700&display=swap');
     </style>
 <link rel="stylesheet" href="css/index.css">
-<script defer src="./js/login.js"></script>
+<script defer src="./js/logic.js"></script>
 <body>
     <header>
         <img src="./requirements/logo.png" alt="appLogo" id="logo">
         <h1>TrimLink</h1>
     </header>
     <main>
-        <form action="/login" method="post" id="login_form">
+        <form action="" method="post" id="login_form">
             <div class="container">
+                <input class="input" type='text' placeholder="Username" name="userName" required>
                 <input class="input" type='email' placeholder="Email id" name="emailId" required>
                 <input class="input" type="password" placeholder="password" name="passWord" required>
                 <div class="buttons">

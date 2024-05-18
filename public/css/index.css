@@ -12,11 +12,15 @@
     font-family: "Poppins", sans-serif;
 }
 
-
 header{
+    display: flex;
+    align-items: center; 
     height: 10vh;
     background-color: var(--color1);
-
+    color: var(--color5);
+}
+#logo{
+    width: 5vw;
 }
 
 #login_form{
@@ -28,19 +32,21 @@ header{
 }
 
 .container{
-    height: 50vh;
-    width: 70vh;
+    padding: 5vh 0vw;
+    max-height: 70vh;
+    width: 50vw;
     display: flex;
     border: none;
-    border-radius: .5vw;
+    border-radius: 2vw;
     flex-direction: column;
     justify-content: center;
     background-color: var(--color5);
 }
 
 .container input{
+    width: 30vw;
     padding: 1vw;
-    margin: 1vh 1vw;
+    margin: 2vh auto;
     outline: none;
     border-radius: .5vw;
     border: none;
@@ -48,14 +54,16 @@ header{
 }
 
 .container button{
+    font-size: .9vw;
     border-radius: .5vw;
     border: none;
-    width: 8vw;
+    width: 10vw;
     padding: 1vw;
     margin: 2vh 1vh;
 }
 
 .buttons{
+    margin: 3vh auto;
     display: flex;
     justify-content: center;
 }
