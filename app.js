@@ -20,8 +20,6 @@ mongoose.connect(url)
     console.log("db is not connected!");
 })
 
-
-
 const app=express()
 
 //for parshing req with json paylode in req.body
