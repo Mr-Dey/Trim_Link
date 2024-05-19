@@ -14,6 +14,10 @@ const urlSchema=mongoose.Schema({
         type:String,
         required:true
     },
+    trimlinkURL:{
+        type:String,
+        required:true
+    },
     analytics: [{
         timestamp : {
             type:Number

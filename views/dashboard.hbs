@@ -35,19 +35,25 @@
                         <tr>
                             <th>Index</th>
                             <th>Long url</th>
-                            <th>Short url</th>
+                            <th>Short url ID</th>
                             <th>Total Clicks</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         {{#each urls}}
                         <tr>
-                            <td>0</td>
+                             <td>0</td>
                             <td>{{this.redirectURL}}</td>
-                            <td id="shortUrl">{{this.shortId}} <div>
-                                possible
-                            </div></td>
+                            <td>{{this.shortId}}</td>
                             <td>{{this.analytics.length}}</td>
+                            <td>
+                                <div id="shortUrl"> 
+                                    <a href={{this.trimlinkURL}}>
+                                    <div>Copy</div>
+                                    </a>
+                                </div>
+                            </td>
                         </tr>
                         {{/each}}
                     </tbody>

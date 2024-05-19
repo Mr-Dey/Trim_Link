@@ -64,10 +64,10 @@ app.use('/trimlink',shortID);
 
 //fortest 
 // app.get("/test",async(req,res)=>{
-//     // res.redirect("https://www.google.com/");
-//     // res.render('status',{status:"This is working"});
-//     json=await urlSchema.find({userName:'dona dey'})
-//     res.json(json)
+//     res.redirect("https://www.google.com/");
+    // res.render('status',{status:"This is working"});
+    // json=await urlSchema.find({userName:'dona dey'})
+    // res.json(json)
 // })
 
 app.listen('3000',()=>{
