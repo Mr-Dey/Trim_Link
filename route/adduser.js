@@ -14,13 +14,12 @@ adduser.post("/",async(req,res)=>{
     })
     try{
         let result=await addData.save();
-        res.send(result);
+        res.render('status',{status:"Sign-up successful! Please proceed to log in."});
         console.log(result);
     }catch(e){
         if(e.code===11000){
-            res.render('status',{status:"Email address is already registered. Please login."});
+            res.render('status',{status:"Email or username is already registered. Please login."});
         }
     }
 })
-
 module.exports=adduser;

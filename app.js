@@ -49,9 +49,10 @@ app.use('/adduser',adduser);
 app.use('/verifyLogin',verifyLogin);
 
 
-//fortest
-app.get("/test",(req,res)=>{
-    res.render('status',{status:"This is working"});
+//fortest 
+app.get("/xyz",(req,res)=>{
+    res.redirect("https://www.google.com/");
+    // res.render('status',{status:"This is working"});
 })
 
 app.listen('3000',()=>{
