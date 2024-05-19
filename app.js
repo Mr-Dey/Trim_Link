@@ -50,9 +50,10 @@ app.use('/verifyLogin',verifyLogin);
 
 
 //fortest 
-app.get("/xyz",(req,res)=>{
-    res.redirect("https://www.google.com/");
+app.get("/mr-dey/xyz",(req,res)=>{
+    // res.redirect("https://www.google.com/");
     // res.render('status',{status:"This is working"});
+    res.render('dashboard');
 })
 
 app.listen('3000',()=>{

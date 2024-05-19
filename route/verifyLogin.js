@@ -16,7 +16,7 @@ verifyLogin.post('/',async(req,res)=>{
         }
 
         //add a dashboard
-        res.send('verified now create dashboard');
+        res.render('dashboard',{userName:user.name});
     }catch(e){
         console.log(e);
     }
