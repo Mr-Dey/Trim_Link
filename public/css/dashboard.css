@@ -102,14 +102,24 @@ header{
 .container table{
     margin: 5vh auto;
     width: 50vw;
+    height: 7vh;
 }
 
 .container table td{
+    max-width: 2vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     background-color: var(--color5);
     /* margin: 2vh 5vw; */
 }
+.container table tr{
+    height: 5vh;
+}
 
-
+#shortUrl{
+    /* display: flex; */
+}
 
 
 

@@ -1,5 +1,6 @@
 //Dependency
 const express = require('express');
+const session = require('express-session');
 const mongoose=require('mongoose');
 const path=require('path');
 const hbs=require('hbs');
@@ -8,11 +9,12 @@ const hbs=require('hbs');
 const signup=require('./route/signup');
 const login=require('./route/login');
 const adduser=require('./route/adduser');
-const verifyLogin=require('./route/verifyLogin');
+const {verifyLogin}=require('./route/verifyLogin');
 const urlGenerate=require('./route/urlGenerate');
+const {shortID}=require('./route/shortID')
 
 //database Schema
-const userSchema=require('./model/usersSchema');
+const urlSchema=require('./model/urlSchema');
 
 
 //database url
@@ -42,20 +44,31 @@ app.use(express.json());
 //for URL-encoded payloads req.body
 app.use(express.urlencoded({extended:false}));
 
+
+//session
+app.use(session({
+    secret:'secret-key',
+    resave:false,
+    saveUninitialized:false
+}))
+
 //Handler
 app.use("/signup",signup);
 app.use("/login",login);
 app.use('/adduser',adduser);
 app.use('/verifyLogin',verifyLogin);
 app.use('/generate',urlGenerate);
+app.use('/trimlink',shortID);
+
 
 
 //fortest 
-app.get("/Mr-dey/xyz",(req,res)=>{
-    // res.redirect("https://www.google.com/");
-    // res.render('status',{status:"This is working"});
-    res.render('dashboard');
-})
+// app.get("/test",async(req,res)=>{
+//     // res.redirect("https://www.google.com/");
+//     // res.render('status',{status:"This is working"});
+//     json=await urlSchema.find({userName:'dona dey'})
+//     res.json(json)
+// })
 
 app.listen('3000',()=>{
     console.log("Running!");
