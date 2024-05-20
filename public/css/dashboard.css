@@ -40,7 +40,8 @@ header nav ul{
 
 
 header nav li{
-    margin: auto 1vw ;
+    font-weight: bold;
+    margin: auto .4vw ;
     transition: all ease-in-out .3s;
     padding: .4vw;
     border-radius: .7vw;
@@ -53,10 +54,12 @@ header nav li:hover{
     
 }
 
+/* navbar */
 #user_options{
     margin: 0vh 1vw;
 }
 
+/* logo */
 #logo{
     width: 10vw;
 }
@@ -69,143 +72,83 @@ body{
 }
 
 
+/* section1 */
 
-
-
-/* section 2 */
-
-.section2{
-    height: 20vh;
-    text-align: center;
-    font-size: 3vw;
-    font-weight: bold;
-}
-
-hr{
-    margin: 10vh auto;
-    height: 0vh;
-    border:var(--color5) solid .2vh;
-    width: 60vw;
-    opacity: 50%;
-}
-
-.section2 span{
-    font-weight: bold;
-    background-color: var(--color5);
-    color: var(--color2);
-}
-
-
-
-/* section 3 */
-
-
-
-.main{
-    overflow-x:scroll ;
-}
-
-.container{
+.section1{
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
+    background-color: var(--color1);
+    margin: 20vh auto;
+    width: 90vw;
+    border-radius: 1vw;
+    box-shadow: 0 .2vw .5vw rgba(0, 0, 0, 0.2);
 }
-
-.generate{
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    background-color: var(--color3);
-    height: 30vh;
-    width: 80vw;
-    margin: 10vh auto;
-    border-radius: 2vw;
-    
-}
-
 .generate form{
-    width: 65vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-}
-
-.generate input{
-    width: 55vw;
-    height: 10vh;
-    padding: 1vh 1vw;
-    font-size: 1vw;
-    border: none;
-    border-radius: 1vw;
-    outline: none;
-}
-.generate button{
-    font-size: 1vw;
-    padding: 4.5vh 1vw;
-    border-radius: 1vw;
-    outline: none;
-    border: none;
-}
-
-.container .table{
+    margin: 10vh auto;
     display: flex;
     justify-content: center;
-    height: 50vh;
-    text-align: center;
-    font-size: 1vw;
-    margin: 5vh auto;
-    border-radius: 2vw;
-    width: 80vw;
-    background-color: var(--color4);
-    color: var(--color2);
-    overflow-x: auto;
+    align-items: center;
 }
-.container table{
+.section1 input{
+    width: 50vw;
+    height: 10vh;
+    border: none;
+    outline: var(--color3) solid .2vw;
+    border-radius: .5vw;
+    padding: 1vh 2vw;
+    margin: 1vh 1vw;
+    font-size: 1vw;
+    transition: all ease-in-out .3s;
+}
+
+.section1 input:hover{
+    scale: 1.02;
+    outline: var(--color2) solid .25vw;
+}
+
+.section1 button{
+    width: 10vw;
+    height: 12vh;
+    border: none;
+    outline: var(--color3) solid .2vw;
+    border-radius: .5vw;
+    padding: 1vh 2vw;
+    margin: 1vh 1vw;
+    font-size: 1vw;
+    transition: all ease-in-out .3s;
+}
+
+.section1 button:hover{
+    color: var(--color4);
+    scale: 1.1;
+    font-size: 1.1vw;
+    outline: var(--color2) solid .25vw;
+}
+
+
+#typed{
+    height: 20vh;
     margin: 5vh auto;
     width: 50vw;
-    height: 7vh;
+    font-size: 2vw;
 }
 
-.container table td{
-    max-width: 2vw;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    /* background-color: var(--color5); */
-    /* margin: 2vh 5vw; */
-}
-.container table tr{
-    height: 5vh;
-}
-
-#shortUrl {
-    display: flex;
-    justify-content: space-between;
-    margin: 0vh auto;
-    width: 80%;
-}
-
-#shortUrl div{
-    background-color: var(--color5);
+#typed label{
+    color: var(--color4);
+    background-color: var(--color2);
+    padding: .5vh 1vw;
     border-radius: .5vw;
-    padding: .3vh .5vw;
+    margin: .5vh .2vw;
 }
-
-#shortUrl a{
+#typed > div{
+    height: 2vh;
+}
+#typed span{
+    font-weight: bold;
     color: var(--color2);
-    text-decoration: none;
-
-}
-
-
-
-footer{
-    height: 10vh;
-   font-size: .7vw;
-   text-align: center;
-}
-footer div{
-   padding: .2vh; 
+    background-color: var(--color5);
+    padding: .5vh 1vw;
+    border-radius: .5vw;
+    margin: .5vh .2vw;
 }

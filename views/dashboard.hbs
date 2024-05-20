@@ -11,85 +11,87 @@
 </style>
 <link rel="stylesheet" href="css/dashboard.css">
 <script defer src="./js/signup.js"></script>
-<script defer src="./js/typed.js"></script>
+<script defer src="./js/typedDashboard.js"></script>
+<script defer src="./js/logicDashboard.js"></script>
 
 <body>
     <header>
         <img src="./requirements/logo.png" alt="appLogo" id="logo">
         <nav>
             <ul>
-                <li id="home">{{userName}}</li>
-                <li id="contactUs">Logout</li>
+                <li id="userDetails">{{userName}}</li>
+                <li id="LogOut">Logout</li>
             </ul>
         </nav>
     </header>
     <main>
-        {{!-- <div class="container"> --}}
 
-            {{!-- section1 --}}
-
-            <section class="section section1">
-                <div class="generate">
-                    <form action="/generate" method="post">
-                        <input type="text" placeholder="Enter / paste your URL here." name="url" required>
-                        <button type="submit">Generate</button>
-                    </form>
-                </div>
-            </section>
-
-            {{!-- section2 --}}
-
-            <section class="section section2">
-
-                <label for="element">This is about</label>
+        {{!-- section1 --}}
+        <section class="section1">
+            <div class="generate">
+                <form action="/generate" method="post">
+                    <input type="text" placeholder="Enter / paste your URL here." name="url" required>
+                    <button type="submit">Generate</button>
+                </form>
+            </div>
+            <div id="typed">
+                <label for="element">From www.xyz/thispage/thiscontent/here... to </label>
+                <div></div>
                 <span id="element" class="color"></span>
+            </div>
+        </section>
 
-            </section>
+        <hr>
 
-            <hr>
-            {{!-- section 3 --}}
+        {{!-- section 2 --}}
 
-            <section class="section section3">
-                <div class="table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Long url</th>
-                                <th>Short url ID</th>
-                                <th>Total Clicks</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {{#each urls}}
-                            <tr>
-                                <td>{{this.redirectURL}}</td>
-                                <td>{{this.shortId}}</td>
-                                <td>{{this.analytics.length}}</td>
-                                <td>
-                                    <div id="shortUrl">
-                                        <a href={{this.trimlinkURL}}>
-                                            <div>Open</div>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                            {{/each}}
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-        {{!-- </div> --}}
+        <section class="section2" id="dashboard">
+            <div>
+                dashboard
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Long url</th>
+                            <th>Short url ID</th>
+                            <th>Total Clicks</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each urls}}
+                        <tr>
+                            <td>{{this.redirectURL}}</td>
+                            <td>{{this.shortId}}</td>
+                            <td>{{this.analytics.length}}</td>
+                            <td>
+                                <div id="shortUrl">
+                                    <a href={{this.trimlinkURL}}>
+                                        <div>Open</div>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
     </main>
+
+
     <footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h4>About Us</h4>
                 <p>TrimLink: Simplifying and shortening your URLs for seamless sharing.</p>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 TrimLink. All rights reserved.</p>
-        </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TrimLink. All rights reserved.</p>
+            </div>
     </footer>
 </body>
 

@@ -51,11 +51,13 @@ header nav ul{
 
 
 header nav li{
-    margin: auto 1vw ;
+    font-weight: bold;
+    margin: auto .4vw ;
     transition: all ease-in-out .3s;
     padding: .4vw;
     border-radius: .7vw;
 }
+
 header nav li:hover{
     cursor: pointer;
     scale: 1.1;
