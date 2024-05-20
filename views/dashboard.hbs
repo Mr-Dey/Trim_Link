@@ -21,7 +21,14 @@
         <img src="./requirements/logo.png" alt="appLogo" id="logo">
         <nav>
             <ul>
-                <li id="userDetails">{{userName}}</li>
+                <li 
+                id="userDetails">{{userName}}</li>
+                {{!-- <div id="userOptions">
+                    <div class="nav_Extras">
+                        <p>x</p>
+                        <p>Change Password</p>
+                    </div>
+                </div> --}}
                 <li id="nav_generate">Generate</li>
                 <li id="nav_dashboard">Dashbord</li>
                 <li id="LogOut">Logout</li>
@@ -32,27 +39,27 @@
 
         {{!-- section1 --}}
         <section class="section1 smooth">
-            <div class="generate smooth">
-                <form action="/generate" method="post">
+            <div class="generate">
+                <form action="/generate" method="post" id="generateForm">
                     <input id="url" type="text" placeholder="Enter / paste your URL here." name="url" required>
                     <input type="text" placeholder="Enter a Name." name="urlName" required>
                     <button type="submit">Generate</button>
                 </form>
             </div>
-            <div id="typed" class="smooth">
+            <div id="typed" >
                 <label for="element">From https://someurl.com/dashboard/brand-details/stitch/templates/letterheads...to </label>
                 <div></div>
                 <span id="element" class="color"></span>
             </div>
         </section>
 
-        <hr class="smooth">
+        <hr>
 
         {{!-- section 2 --}}
 
         <section class="section2 smooth" id="dashboard">
             <div id="dashboard_title" class="smooth">
-                <h2 class="smooth">Dashboard</h2>
+                <h2>Dashboard</h2>
             </div>
             <div class="table smooth">
                 <table class="smooth">
@@ -64,17 +71,17 @@
                             <th class="smooth" id="totalClicks">Total Clicks</th>
                             <th class="smooth" id="openURL">Redirect</th>
                             <th class="smooth" id="copyURL">Copy</th>
-                            <th class="smooth" id="URLanalytics">analytics</th>
+                            {{!-- <th class="smooth" id="URLanalytics">analytics</th> --}}
                         </tr>
                     </thead>
                     <tbody>
                         {{#each userData}}
                         <tr>
-                            <td class="smooth">{{this.redirectURLName}}</td>
-                            <td class="smooth">{{this.redirectURL}}</td>
-                            <td class="smooth">{{this.shortId}}</td>
-                            <td class="smooth">{{this.analytics.length}}</td>
-                            <td class="smooth">
+                            <td>{{this.redirectURLName}}</td>
+                            <td>{{this.redirectURL}}</td>
+                            <td>{{this.shortId}}</td>
+                            <td>{{this.analytics.length}}</td>
+                            <td>
                                 <div class="btn">
                                     <a href={{this.trimlinkURL}}>
                                         <div>Open</div>
@@ -82,7 +89,7 @@
                                 </div>
     
                             </td>
-                            <td class="smooth">
+                            <td>
                                 <div class="btn copybtn">
                                         Copy
                                     <span class="copybtn_span">
@@ -92,14 +99,14 @@
                                 </div>
     
                             </td>
-                            <td class="smooth">
+                            {{!-- <td>
                                 <div class="btn">
                                     <a href={{this.trimlinkURL}}>
                                         <div>Open</div>
                                     </a>
                                 </div>
     
-                            </td>
+                            </td> --}}
                         </tr>
                         {{/each}}
                     </tbody>

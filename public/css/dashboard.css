@@ -68,10 +68,46 @@ header nav li:hover{
     
 }
 
-/* navbar */
-#user_options{
-    margin: 0vh 1vw;
+/* navbar extended */
+/* #userOptions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2vw;
+    position:fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff74;
+    backdrop-filter:blur(.5vw);
+    height: 100vh;
+    width: 100vw;
 }
+
+#userOptions p{
+    text-align: center;
+}
+
+.nav_Extras{
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vw;
+    padding: 10vh 50vw;
+    color: var(--color2);
+    font-weight: bold;
+    background-color:#ac3b61a9;
+    backdrop-filter: blur(.2vw);
+}
+.nav_Extras p{
+    text-align: end;
+    width: 100;
+} */
+
+
+
 
 /* logo */
 #logo{
@@ -108,6 +144,7 @@ body{
     width: 10vw;
     height: 10vh;
     border: none;
+    background-color: var(--color2);
     outline: var(--color3) solid .2vw;
     border-radius: .5vw;
     padding: 1vh 2vw;
@@ -225,6 +262,7 @@ hr{
 }
 
 .table table{
+    font-size: 1vw;
     margin: 5vh auto;
     width: 70vw;
     height: 7vh;

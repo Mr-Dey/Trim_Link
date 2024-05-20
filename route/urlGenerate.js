@@ -1,5 +1,6 @@
 const express=require('express');
 const urlGenerate=express.Router();
+const dashboard=express.Router()
 const URL=require('../model/urlSchema');
 const {generateID}=require('../controllers/generateID');
 const { shortID } = require('./shortID');
@@ -19,10 +20,23 @@ urlGenerate.post ('/',async(req,res)=>{
       trimlinkURL:trimLink,
       analytics:[]
    })
-   let userName=req.session.userName;
-   //Find all the urls related to the user. (filter using userName)
-   let userData=await URL.find({userName:userName});
-   res.render('dashboard',{userName:userName,userData:userData});
+   res.redirect('/dashboard');
 })
 
-module.exports=urlGenerate;
+
+dashboard.get('/',async(req,res)=>{
+   if(!req.session.userName){
+      res.redirect('/');
+   }else{
+      let userName=req.session.userName;
+      let userData=await URL.find({userName:userName});
+      res.render('dashboard',{userName:userName,userData:userData});
+   }
+})
+
+
+
+module.exports={
+   urlGenerate,
+   dashboard
+};

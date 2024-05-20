@@ -42,3 +42,21 @@ copyBtns.forEach((btn)=>{
         btn.textContent="Copied";
     })
 })
+
+
+//generateForm for generate id
+const generateForm=document.querySelector('#generateForm');
+generatebtn.addEventListener('submit',async(e)=>{
+    e.preventDefault();
+    const formdata=new FormData(generateForm);
+    try{
+        const response=await fetch('/generate',{
+            method:'POST',
+            body:formdata
+        })
+        const result=await response.json();
+        console.log(result);
+    }catch(e){
+        console.log(e);
+    }
+})
