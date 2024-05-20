@@ -1,0 +1,62 @@
+let script = document.createElement('script');
+
+script.src = 'https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js';
+
+script.onload = ()=> {
+    var typed = new Typed('#element', {
+        strings: [
+            "Trim your YouTube Link",
+            "Trim your LinkedIn Link",
+            "Trim your Facebook Link",
+            "Trim your Instagram Link",
+            "Trim your Twitter Link",
+            "Trim your TikTok Link",
+            "Trim your Pinterest Link",
+            "Trim your Spotify Link",
+            "Trim your SoundCloud Link",
+            "Trim your Twitch Link",
+            "Trim your Vimeo Link",
+            "Trim your Dailymotion Link",
+            "Trim your Reddit Link",
+            "Trim your Tumblr Link",
+            "Trim your Snapchat Link",
+            "Trim your WhatsApp Link",
+            "Trim your Discord Link",
+            "Trim your Skype Link",
+            "Trim your Zoom Link",
+            "Trim your Google Meet Link",
+            "Trim your Microsoft Teams Link",
+            "Trim your Slack Link",
+            "Trim your Zoom Link",
+            "Trim your Google Meet Link",
+            "Trim your Microsoft Teams Link",
+            "Trim your Slack Link",
+            "Trim your Zoom Link",
+            "Trim your Google Meet Link",
+            "Trim your Microsoft Teams Link",
+            "Trim your Slack Link",
+            "Trim your Zoom Link",
+            "Trim your Google Meet Link",
+            "Trim your Microsoft Teams Link",
+            "Trim your Slack Link",
+            "Trim your Zoom Link",
+            "Trim your Google Meet Link",
+            "Trim your Microsoft Teams Link",
+            "Trim your Slack Link",
+            "Trim your Zoom Link",
+            "Trim your Google Meet Link",
+            "Trim your Microsoft Teams Link",
+            "Trim your Slack Link",
+            "Trim your Zoom Link",
+            "Trim your Google Meet Link",
+            "Trim your Microsoft Teams Link",
+            "Trim your Slack Link",
+            "Trim your Zoom Link",
+            "Trim your Google Meet Link",
+            "Trim your Microsoft Teams Link",
+            "Trim your Slack Link"
+        ],
+        typeSpeed: 100,
+    });
+};
+document.head.appendChild(script);

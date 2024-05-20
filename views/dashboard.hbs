@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;600;700&display=swap');
-    </style>
+</style>
 <link rel="stylesheet" href="css/dashboard.css">
 <script defer src="./js/signup.js"></script>
+<script defer src="./js/typed.js"></script>
+
 <body>
     <header>
         <div class="left">
@@ -23,46 +26,66 @@
     </header>
     <main>
         <div class="container">
-            <div class="generate">
-                <form action="/generate" method="post">
-                    <input type="text" placeholder="Enter / paste your URL here." name="url" required>
-                    <button type="submit">Generate</button>
-                </form>
-            </div>
-            <div class="table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Index</th>
-                            <th>Long url</th>
-                            <th>Short url ID</th>
-                            <th>Total Clicks</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{#each urls}}
-                        <tr>
-                             <td>0</td>
-                            <td>{{this.redirectURL}}</td>
-                            <td>{{this.shortId}}</td>
-                            <td>{{this.analytics.length}}</td>
-                            <td>
-                                <div id="shortUrl"> 
-                                    <a href={{this.trimlinkURL}}>
-                                    <div>Copy</div>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        {{/each}}
-                    </tbody>
-                </table>
-            </div>
+
+            {{!-- section1 --}}
+
+            <section class="section section1">
+                <div class="generate">
+                    <form action="/generate" method="post">
+                        <input type="text" placeholder="Enter / paste your URL here." name="url" required>
+                        <button type="submit">Generate</button>
+                    </form>
+                </div>
+            </section>
+
+            {{!-- section2 --}}
+
+            <section class="section section2">
+
+                <label for="element">This is about</label>
+                <span id="element" class="color"></span>
+
+            </section>
+
+            <hr>
+            {{!-- section 3 --}}
+
+            <section class="section section3">
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Long url</th>
+                                <th>Short url ID</th>
+                                <th>Total Clicks</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each urls}}
+                            <tr>
+                                <td>{{this.redirectURL}}</td>
+                                <td>{{this.shortId}}</td>
+                                <td>{{this.analytics.length}}</td>
+                                <td>
+                                    <div id="shortUrl">
+                                        <a href={{this.trimlinkURL}}>
+                                            <div>Open</div>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </div>
     </main>
     <footer>
-        <p>Trim Link - Your go-to URL shortening tool! Simplify your links for social media, emails, and beyond. Need help? <a href="subhasishdey619@gmail.com">Contact us</a>.</p>
+        <p>Trim Link - Your go-to URL shortening tool! Simplify your links for social media, emails, and beyond. Need
+            help? <a href="subhasishdey619@gmail.com">Contact us</a>.</p>
     </footer>
 </body>
+
 </html>
