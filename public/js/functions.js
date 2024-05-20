@@ -8,6 +8,5 @@ home_nav.addEventListener('click',(e)=>{
 
 contact_nav.addEventListener('click',(e)=>{
     e.preventDefault();
-    window.location.href="";
-
+    window.location.href="https://github.com/Mr-Dey";
 })

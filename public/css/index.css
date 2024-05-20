@@ -27,6 +27,11 @@
 }
 
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 96vw;
     display: flex;
     align-items: center; 
     justify-content: space-between;
@@ -34,6 +39,7 @@ header{
     background-color: var(--color1);
     color: var(--color5);
     padding: 0vh 2vw;
+    box-shadow: 0 .2vw .5vw rgba(0, 0, 0, 0.2);
 }
 header nav ul{
     font-size: .9vw;
@@ -63,16 +69,20 @@ header nav li:hover{
 }
 
 /* added */
+body{
+    background-color:var(--color2);
+}
 
 main{
+    margin: 15vh auto;
+    height: 90vh;
     max-width: 100vw;
     padding: 0vh 4vw;
     display: flex;
     justify-content:space-around;
-    background-color:var(--color2);
 }
 main .left{
-    margin: 20vh auto;
+    margin: 25vh auto;
     font-size: 3vw;
     width: 50vw;
     padding: 1vh 3vw;
@@ -154,10 +164,10 @@ main .left{
 
 
 footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 10vh;
-    background-color: var(--color2);
-    font-size: .7vw;
+   font-size: .7vw;
+   text-align: center;
+}
+footer div{
+   padding: .2vh; 
 }

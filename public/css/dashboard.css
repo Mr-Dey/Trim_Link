@@ -4,8 +4,6 @@
     --color3:#bab2b5;
     --color4:#123c69;
     --color5:#ac3b61;
-
-    --dropShadow: .1vw .4vh .2vh rgba(0, 0, 0, 0.3);
 }
 
 *{
@@ -15,23 +13,44 @@
     scrollbar-width: none;
 }
 
+/* header */
+
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 96vw;
     display: flex;
-    padding: 0vh 2vw;
     align-items: center; 
-    justify-content:space-between;
+    justify-content: space-between;
     height: 10vh;
     background-color: var(--color1);
     color: var(--color5);
-    box-shadow: var(--dropShadow);
+    padding: 0vh 2vw;
+    box-shadow: 0 .2vw .5vw rgba(0, 0, 0, 0.2);
 }
-
-.left ,.right{
-    height: 10vh;
+header nav ul{
+    font-size: .9vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1vw;
+    list-style: none;
+}
+
+
+header nav li{
+    margin: auto 1vw ;
+    transition: all ease-in-out .3s;
+    padding: .4vw;
+    border-radius: .7vw;
+}
+header nav li:hover{
+    cursor: pointer;
+    scale: 1.1;
+    color: var(--color2);
+    background-color: var(--color5);
+    
 }
 
 #user_options{
@@ -39,12 +58,22 @@ header{
 }
 
 #logo{
-    width: 4vw;
+    width: 10vw;
 }
 
 
 
-/* dashboard */
+/* body */
+body{
+    background-color: var(--color2);
+}
+
+
+
+
+
+/* section 2 */
+
 .section2{
     height: 20vh;
     text-align: center;
@@ -68,11 +97,9 @@ hr{
 
 
 
+/* section 3 */
 
 
-body{
-    background-color: var(--color2);
-}
 
 .main{
     overflow-x:scroll ;
@@ -134,7 +161,6 @@ body{
     background-color: var(--color4);
     color: var(--color2);
     overflow-x: auto;
-    box-shadow: var(--dropShadow);
 }
 .container table{
     margin: 5vh auto;
@@ -176,10 +202,10 @@ body{
 
 
 footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 10vh;
-    background-color: var(--color2);
-    font-size: .7vw;
+   font-size: .7vw;
+   text-align: center;
+}
+footer div{
+   padding: .2vh; 
 }
