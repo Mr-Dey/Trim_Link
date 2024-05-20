@@ -173,3 +173,84 @@ footer{
 footer div{
    padding: .2vh; 
 }
+
+
+
+
+
+/* responsive */
+
+@media only screen and (max-width: 768px) {
+   #logo{
+    width: 15vh;
+   }
+   nav li{
+    font-size: 4vw;
+    background-color: var(--color5);
+    color: var(--color2);
+   }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        height:80vh;
+        justify-content:start;
+        padding: 0vh 0vw;
+        margin: 15vh 0vw;
+    }
+    main .left{
+        padding: 5vh 5vw;
+        margin: 5vh 0vw;
+        font-size: 7vw;
+        height: 20vh;
+        width: 90%;
+    }
+    #login_form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+        width: 100%;
+    }
+    #container_title {
+        font-size: 8vw;
+        margin: 1vw auto;
+    }
+    .container {
+        padding: 5vh 0vw;
+        width: 100%;
+        border-radius: 0vw;
+    }
+    .container input {
+        width: 80%;
+        height: 7vh;
+        padding: 0vh 2vw;
+        margin: 1vh auto;
+        outline: none;
+        border-radius: 2vw;
+        border: none;
+        font-size: 5vw;
+        transition: all ease .5s;
+    }
+    .buttons {
+        margin: 3vh auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .container button {
+        font-size: 5vw;
+        border-radius: 2vw;
+        border: none;
+        width: 80%;
+        height: 6vh;
+        padding: 1vw;
+        margin: 1vh 1vh;
+        transition: all ease .5s;
+    }
+    footer{
+        font-size: 2.5vw;
+    }
+}

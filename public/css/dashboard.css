@@ -335,3 +335,128 @@ footer{
 footer div{
    padding: .2vh; 
 }
+
+
+
+/* responsive */
+
+
+
+@media only screen and (max-width: 768px){
+    #logo{
+        width: 15vh;
+    }
+
+    nav li{
+    text-align: center;
+    width: 13vw;
+    font-size: 2.5vw;
+    background-color: var(--color5);
+    color: var(--color2);
+    }
+    .generate{
+        width: 100%;
+    }
+
+    .generate form {
+        font-size: 2vw;
+        margin: 10vh auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .section1 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--color2);
+        margin: 20vh auto;
+        width: 100%;
+        border-radius: 0vw;
+        box-shadow: 0 .2vw .5vw rgba(0, 0, 0, 0.2);
+    }
+
+
+    .section1 input {
+        width: 80%;
+        height: 10vh;
+        border: none;
+        background-color: var(--color2);
+        outline: var(--color3) solid .2vw;
+        border-radius: 2vw;
+        padding: 1vh 2vw;
+        margin: 1vh 1vw;
+        font-size: 5vw;
+        transition: all ease-in-out .3s;
+    }
+
+    .section1 #url {
+        font-size: 5vw;
+        width: 80%;
+    }
+
+    .section1 button {
+        width: 80%;
+        height: 12vh;
+        border: none;
+        outline: var(--color3) solid .2vw;
+        border-radius: 2vw;
+        padding: 1vh 2vw;
+        margin: 1vh 1vw;
+        font-size: 5vw;
+        transition: all ease-in-out .3s;
+    }
+    #typed {
+        text-align: center;
+        height: 10vh;
+        margin: 5vh auto;
+        width: 100%;
+        font-size: 3.5vw;
+        opacity: 70%;
+    }
+
+    #dashboard_title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5vw;
+        width: 80%;
+        height: 10vh;
+        border-radius: .5vw;
+        text-align: center;
+        background-color: var(--color1);
+        color: var(--color5);
+        padding: 0vh 2vw;
+        box-shadow: 0 .2vw .5vw rgba(0, 0, 0, 0.2);
+    }
+    .table {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 70vh;
+        background-color: var(--color4);
+        color: var(--color2);
+        overflow-x: scroll;
+        overflow-y: scroll;
+        margin: 5vh auto;
+        border-radius: 0vw;
+        box-shadow: 0 .2vw .5vw rgba(0, 0, 0, 0.2);
+    }
+    .table table {
+        font-size: 2.5vw;
+        margin: 5vh auto;
+        width: 95%;
+        height: 7vh;
+        text-align: center;
+    }
+    #openURL, #copyURL, #URLanalytics, #longURL {
+        width: 20%;
+    }
+
+    footer{
+        font-size: 2.5vw;
+    }
+}

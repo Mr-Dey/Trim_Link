@@ -5,11 +5,11 @@ const userSchema=require('../model/usersSchema'); //need userSchema to verify wh
 const urlSchema=require('../model/urlSchema'); //UrlSchema is to render all the url details.
 
 
-
 verifyLogin.post('/',async(req,res)=>{
     const {emailId:email,passWord:password}=req.body;
     try{
-        const user = await userSchema.findOne({email});
+        let emailLower=email.toLowerCase()
+        const user = await userSchema.findOne({email:emailLower});
         if (!user){
             res.render('status',{status:"This email address is not registered. Please check the spelling or sign up for an account."});
         }
