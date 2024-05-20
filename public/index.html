@@ -10,23 +10,35 @@
     </style>
 <link rel="stylesheet" href="css/index.css">
 <script defer src="./js/login.js"></script>
+<script defer src="./js/typed.js"></script>
 <body>
     <header>
         <img src="./requirements/logo.png" alt="appLogo" id="logo">
-        <h1>TrimLink</h1>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <form action="/verifyLogin" method="post" id="login_form">
-            <div class="container">
-                <span id="container_title">Login</span>
-                <input class="input" type='email' placeholder="Email id" name="emailId" required>
-                <input class="input" type="password" placeholder="password" name="passWord" required>
-                <div class="buttons">
-                    <button type="submit" id="login_btn">Login</button>
-                    <button type="submit" id="signup_btn">Sign up</button>
+        <div class="left">
+            <label for="element">This is about</label>
+                <span id="element" class="color"></span>
+        </div>
+        <div class="right">
+            <form action="/verifyLogin" method="post" id="login_form">
+                <div class="container">
+                    <span id="container_title">Login</span>
+                    <input class="input" type='email' placeholder="Email id" name="emailId" required>
+                    <input class="input" type="password" placeholder="password" name="passWord" required>
+                    <div class="buttons">
+                        <button type="submit" id="login_btn">Login</button>
+                        <button type="submit" id="signup_btn">Sign up</button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </main>
     <footer>
         <p>Trim Link - Your go-to URL shortening tool! Simplify your links for social media, emails, and beyond. Need help? <a href="subhasishdey619@gmail.com">Contact us</a>.</p>
