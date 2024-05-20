@@ -13,7 +13,7 @@
     scrollbar-width: none;
 }
 
-/* smooth */
+/* smooth animation*/
 .smooth{
     opacity: 0;
     filter: blur(5px);

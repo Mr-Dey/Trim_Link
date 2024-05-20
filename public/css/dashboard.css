@@ -13,6 +13,20 @@
     scrollbar-width: none;
 }
 
+
+/* smooth animation*/
+.smooth{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-1vw);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0vw);
+}
+
 /* header */
 
 header{
@@ -134,8 +148,9 @@ body{
 #typed{
     height: 20vh;
     margin: 5vh auto;
-    width: 50vw;
-    font-size: 2vw;
+    width: 70vw;
+    font-size: 1.5vw;
+    opacity: 70%;
 }
 
 #typed label{
@@ -163,6 +178,15 @@ body{
 }
 
 
+hr{
+    margin: 20vh auto;
+    height: 0vh;
+    border:var(--color5) solid .2vh;
+    width: 60vw;
+    opacity: 50%;
+}
+
+
 /* section 2 */
 
 .section2{
@@ -175,12 +199,22 @@ body{
 
 #dashboard_title{
     font-size: 2vw;
+    width: 20vw;
+    height: 10vh;
+    border-radius: .5vw;
+    text-align: center;
+    background-color: var(--color1);
+    color: var(--color5);
+    padding: 0vh 2vw;
+    box-shadow: 0 .2vw .5vw rgba(0, 0, 0, 0.2);
 }
+
+
 
 .table{
     display: flex;
     justify-content: center;
-    width: 90vw;
+    width: 80vw;
     height: 70vh;
     background-color: var(--color4);
     color: var(--color2);
@@ -197,12 +231,13 @@ body{
     text-align: center;
 }
 
+
+
 .table td{
     max-width: 2vw;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    background-color: red;
 }
 
 .table tr{
