@@ -10,6 +10,20 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    scrollbar-width: none;
+}
+
+/* smooth */
+.smooth{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-1vw);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0vw);
 }
 
 header{
@@ -22,14 +36,26 @@ header{
     padding: 0vh 2vw;
 }
 header nav ul{
-    font-size: 1vw;
+    font-size: .9vw;
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
 }
+
+
 header nav li{
     margin: auto 1vw ;
+    transition: all ease-in-out .3s;
+    padding: .4vw;
+    border-radius: .7vw;
+}
+header nav li:hover{
+    cursor: pointer;
+    scale: 1.1;
+    color: var(--color2);
+    background-color: var(--color5);
+    
 }
 
 #logo{
@@ -97,6 +123,11 @@ main .left{
     border-radius: .5vw;
     border: none;
     font-size: 1vw;
+    transition: all ease .5s
+}
+.container input:hover{
+    cursor: pointer;
+    scale: 1.02;
 }
 
 .container button{
@@ -106,6 +137,13 @@ main .left{
     width: 10vw;
     padding: 1vw;
     margin: 2vh 1vh;
+    transition: all ease .5s;
+}
+
+.buttons button:hover{
+    scale: 1.1;
+    cursor: pointer;
+    color: var(--color5);
 }
 
 .buttons{
@@ -113,6 +151,7 @@ main .left{
     display: flex;
     justify-content: center;
 }
+
 
 footer{
     display: flex;
