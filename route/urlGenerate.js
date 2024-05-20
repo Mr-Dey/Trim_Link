@@ -7,7 +7,7 @@ const { shortID } = require('./shortID');
 const host="http://localhost:3000/"
 
 urlGenerate.post ('/',async(req,res)=>{
-   const {url}=req.body;
+   const {url,urlName}=req.body;
    const shortId=await generateID(8)
    const trimLink=`${host}trimlink/${shortId}`;
    console.log(trimLink);
@@ -15,13 +15,14 @@ urlGenerate.post ('/',async(req,res)=>{
       userName:req.session.userName,
       shortId:await shortId,
       redirectURL:url,
+      redirectURLName:urlName,
       trimlinkURL:trimLink,
       analytics:[]
    })
    let userName=req.session.userName;
    //Find all the urls related to the user. (filter using userName)
-   let urlUpdate=await URL.find({userName:userName});
-   res.render('dashboard',{userName:userName,urls:urlUpdate});
+   let userData=await URL.find({userName:userName});
+   res.render('dashboard',{userName:userName,userData:userData});
 })
 
 module.exports=urlGenerate;

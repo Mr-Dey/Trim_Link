@@ -22,9 +22,8 @@ verifyLogin.post('/',async(req,res)=>{
         req.session.userEmail=user.email;
 
         //urlSchema
-        const urlData=await urlSchema.find({userName:req.session.userName});
-        console.log(urlData);
-        res.render('dashboard',{userName:req.session.userName,urls:urlData});
+        const userData=await urlSchema.find({userName:req.session.userName});
+        res.render('dashboard',{userName:req.session.userName,userData:userData});
     }catch(e){
         console.log(e);
     }

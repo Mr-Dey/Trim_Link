@@ -30,7 +30,8 @@
         <section class="section1">
             <div class="generate">
                 <form action="/generate" method="post">
-                    <input type="text" placeholder="Enter / paste your URL here." name="url" required>
+                    <input id="url" type="text" placeholder="Enter / paste your URL here." name="url" required>
+                    <input type="text" placeholder="Enter a Name." name="urlName" required>
                     <button type="submit">Generate</button>
                 </form>
             </div>
@@ -46,31 +47,54 @@
         {{!-- section 2 --}}
 
         <section class="section2" id="dashboard">
-            <div>
-                dashboard
+            <div id="dashboard_title">
+                <h2>Dashboard</h2>
             </div>
             <div class="table">
                 <table>
                     <thead>
                         <tr>
-                            <th>Long url</th>
-                            <th>Short url ID</th>
-                            <th>Total Clicks</th>
-                            <th></th>
+                            <th id="URLname">URL name</th>
+                            <th id="longURL">Original URL</th>
+                            <th id="URLID">URL ID</th>
+                            <th id="totalClicks">Total Clicks</th>
+                            <th id="openURL">Redirect</th>
+                            <th id="copyURL">Copy</th>
+                            <th id="URLanalytics">analytics</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {{#each urls}}
+                        {{#each userData}}
                         <tr>
+                            <td>{{this.redirectURLName}}</td>
                             <td>{{this.redirectURL}}</td>
                             <td>{{this.shortId}}</td>
                             <td>{{this.analytics.length}}</td>
                             <td>
-                                <div id="shortUrl">
+                                <div class="btn">
                                     <a href={{this.trimlinkURL}}>
                                         <div>Open</div>
                                     </a>
                                 </div>
+    
+                            </td>
+                            <td>
+                                <div class="btn copybtn">
+                                        Copy
+                                    <span class="copybtn_span">
+                                        {{this.trimlinkURL}}
+                                    </span>
+                                    </a>
+                                </div>
+    
+                            </td>
+                            <td>
+                                <div class="btn">
+                                    <a href={{this.trimlinkURL}}>
+                                        <div>Open</div>
+                                    </a>
+                                </div>
+    
                             </td>
                         </tr>
                         {{/each}}
