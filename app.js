@@ -11,7 +11,8 @@ const signup=require('./route/signup');
 const login=require('./route/login');
 const adduser=require('./route/adduser');
 const {verifyLogin}=require('./route/verifyLogin');
-
+const {profile}=require('./route/profile.js');
+const {changePassword}=require('./route/changePassword.js')
 const {urlGenerate}=require('./route/urlGenerate');
 const {dashboard}=require('./route/urlGenerate');
 const {trimlink}=require('./route/trimlink')
@@ -60,11 +61,14 @@ app.use('/verifyLogin',verifyLogin);
 app.use('/generate',urlGenerate);
 app.use('/dashboard',dashboard);
 app.use('/trimlink',trimlink);
+app.use('/changepassword',changePassword);
+app.use('/profile',profile);
+
 
 
 
 //fortest 
-// app.get("/test",async(req,res)=>{
+// app.get("/changepassword",(req,res)=>{
 //     res.redirect("https://www.google.com/");
     // res.render('status',{status:"This is working"});
     // json=await urlSchema.find({userName:'dona dey'})

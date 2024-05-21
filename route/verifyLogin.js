@@ -1,4 +1,5 @@
 const express=require('express');
+const bcrypt=require('bcrypt');
 const verifyLogin=express.Router();
 const path=require('path');
 const userSchema=require('../model/usersSchema'); //need userSchema to verify whether the email and pass are in the database
@@ -12,7 +13,8 @@ verifyLogin.post('/',async(req,res)=>{
         if (!user){
             res.render('status',{status:"This email address is not registered. Please check the spelling or sign up for an account."});
         }
-        if(password!=user.password){
+        let isMatch=await bcrypt.compare(password,user.password);
+        if(!isMatch){
             res.render('status',{status:"Incorrect login credentials."})
         }
 

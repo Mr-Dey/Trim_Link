@@ -5,6 +5,14 @@ logout.addEventListener('click',(e)=>{
     window.location.href="/";
 })
 
+
+//changePassword
+const userDetails = document.querySelector('#userDetails');
+userDetails.addEventListener('click',(e)=>{
+    e.preventDefault();
+    window.location.href="/profile";
+})
+
 //for scroll
 const navToGenerate = document.querySelector('#nav_generate');
 const navToDashboard = document.querySelector('#nav_dashboard');
@@ -43,20 +51,3 @@ copyBtns.forEach((btn)=>{
     })
 })
 
-
-//generateForm for generate id
-const generateForm=document.querySelector('#generateForm');
-generatebtn.addEventListener('submit',async(e)=>{
-    e.preventDefault();
-    const formdata=new FormData(generateForm);
-    try{
-        const response=await fetch('/generate',{
-            method:'POST',
-            body:formdata
-        })
-        const result=await response.json();
-        console.log(result);
-    }catch(e){
-        console.log(e);
-    }
-})
