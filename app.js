@@ -4,15 +4,17 @@ const session = require('express-session');
 const mongoose=require('mongoose');
 const path=require('path');
 const hbs=require('hbs');
+require('dotenv').config();
 
 //routes
 const signup=require('./route/signup');
 const login=require('./route/login');
 const adduser=require('./route/adduser');
 const {verifyLogin}=require('./route/verifyLogin');
+
 const {urlGenerate}=require('./route/urlGenerate');
 const {dashboard}=require('./route/urlGenerate');
-const {shortID}=require('./route/shortID')
+const {trimlink}=require('./route/trimlink')
 
 
 //database url
@@ -57,7 +59,7 @@ app.use('/adduser',adduser);
 app.use('/verifyLogin',verifyLogin);
 app.use('/generate',urlGenerate);
 app.use('/dashboard',dashboard);
-app.use('/trimlink',shortID);
+app.use('/trimlink',trimlink);
 
 
 

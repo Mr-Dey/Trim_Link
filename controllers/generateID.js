@@ -1,8 +1,4 @@
-const urlSchema=require('../model/urlSchema'); //if randomID not in urlSchema.shortID => ok
-
-
-//It will generate an shortID and check whether its not in DB.
-const generateID=async(length)=>{
+const generateID=(length)=>{
     const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
     const upperCase = lowerCase.toUpperCase();
     const numbers = '0123456789';
@@ -13,12 +9,6 @@ const generateID=async(length)=>{
         let index=Math.floor(Math.random()*all.length)
         id+=all[index];
     }
-    const exists=await urlSchema.findOne({shortId:id});
-    if(!exists){
-        return id;
-    }else{
-        return generateID(length);
-    }
-        
+    return id;
 }
-module.exports ={generateID};
+module.exports =generateID;

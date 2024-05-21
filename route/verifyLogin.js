@@ -2,7 +2,6 @@ const express=require('express');
 const verifyLogin=express.Router();
 const path=require('path');
 const userSchema=require('../model/usersSchema'); //need userSchema to verify whether the email and pass are in the database
-const urlSchema=require('../model/urlSchema'); //UrlSchema is to render all the url details.
 
 
 verifyLogin.post('/',async(req,res)=>{
@@ -21,8 +20,7 @@ verifyLogin.post('/',async(req,res)=>{
         req.session.userName=user.name;
         req.session.userEmail=user.email;
 
-        //urlSchema
-        const userData=await urlSchema.find({userName:req.session.userName});
+        const userData=user.urlSchema;
         res.render('dashboard',{userName:req.session.userName,userData:userData});
     }catch(e){
         console.log(e);
