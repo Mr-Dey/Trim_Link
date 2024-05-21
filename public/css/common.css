@@ -103,8 +103,8 @@ body{
     border-radius: 1vw;
     width: 50vw;
     height: 15vh;
-    background-color: var(--color2);
-    color: var(--color4);
+    background-color: var(--color5);
+    color: var(--color2);
     margin: 5vh auto;
     font-size: 3vw;
 }
