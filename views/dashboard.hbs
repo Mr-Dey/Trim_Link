@@ -41,9 +41,12 @@
                 </form>
             </div>
             <div id="typed" >
-                <label for="element">From https://someurl.com/dashboard/brand-details/stitch/templates/letterheads...to </label>
+                <label for="element" class="text_highlight">From</label>
+                <label for="element">https://someurl.com/dashboard/brand-details/stitch/templates/letterheads... to </label>
+                <div id="typedText">
                 <div></div>
                 <span id="element" class="color"></span>
+                </div>
             </div>
         </section>
 
@@ -61,11 +64,11 @@
                         <tr>
                             <th class="smooth" id="URLname">name</th>
                             <th class="smooth" id="longURL">Original URL</th>
-                            <th class="smooth" id="URLID">URL ID</th>
+                            <th class="smooth urlid" id="URLID">URL ID</th>
                             <th class="smooth" id="totalClicks">Clicks</th>
                             <th class="smooth" id="openURL">Redirect</th>
                             <th class="smooth" id="copyURL">Copy</th>
-                            {{!-- <th class="smooth" id="URLanalytics">analytics</th> --}}
+                            <th class="smooth" id="delete">Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -73,7 +76,7 @@
                         <tr>
                             <td>{{this.redirectURLName}}</td>
                             <td>{{this.redirectURL}}</td>
-                            <td>{{this.shortId}}</td>
+                            <td class="urlid">{{this.shortId}}</td>
                             <td>{{this.analytics.length}}</td>
                             <td>
                                 <div class="btn">
@@ -93,14 +96,14 @@
                                 </div>
     
                             </td>
-                            {{!-- <td>
-                                <div class="btn">
-                                    <a href={{this.trimlinkURL}}>
-                                        <div>Open</div>
+                            <td>
+                                <div class="btn deletebtn">
+                                    <a href='/deleteurl/{{this.shortId}}'>
+                                        <div>Delete</div>
                                     </a>
                                 </div>
     
-                            </td> --}}
+                            </td>
                         </tr>
                         {{/each}}
                     </tbody>

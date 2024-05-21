@@ -68,46 +68,6 @@ header nav li:hover{
     
 }
 
-/* navbar extended */
-/* #userOptions{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 2vw;
-    position:fixed;
-    top: 0;
-    left: 0;
-    background-color: #ffffff74;
-    backdrop-filter:blur(.5vw);
-    height: 100vh;
-    width: 100vw;
-}
-
-#userOptions p{
-    text-align: center;
-}
-
-.nav_Extras{
-    font-size: 4vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 50vw;
-    padding: 10vh 50vw;
-    color: var(--color2);
-    font-weight: bold;
-    background-color:#ac3b61a9;
-    backdrop-filter: blur(.2vw);
-}
-.nav_Extras p{
-    text-align: end;
-    width: 100;
-} */
-
-
-
 
 /* logo */
 #logo{
@@ -197,6 +157,16 @@ body{
     border-radius: .5vw;
     margin: .5vh .2vw;
 }
+
+#typedText{
+    margin: 5vh auto;
+}
+
+#typed .text_highlight{
+    color: var(--color2);
+    background-color: var(--color4);
+}
+
 #typed > div{
     height: 2vh;
 }
@@ -298,7 +268,7 @@ hr{
     width: 10vw;
 }
 
-#openURL, #copyURL,#URLanalytics {
+#openURL, #copyURL,#delete {
     width: 5vw;
 }
 
@@ -410,12 +380,21 @@ footer div{
         transition: all ease-in-out .3s;
     }
     #typed {
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        height: 10vh;
+        height: 30vh;
         margin: 5vh auto;
-        width: 100%;
+        width: 80%;
         font-size: 3.5vw;
         opacity: 70%;
+    }
+
+    #typed .text_highlight{
+        text-align: center;
+        width: 100%;
+        color: var(--color2);
+        background-color: var(--color4);
     }
 
     #dashboard_title {
@@ -440,7 +419,6 @@ footer div{
         background-color: var(--color4);
         color: var(--color2);
         overflow-x: scroll;
-        overflow-y: scroll;
         margin: 5vh auto;
         border-radius: 0vw;
         box-shadow: 0 .2vw .5vw rgba(0, 0, 0, 0.2);
@@ -452,8 +430,11 @@ footer div{
         height: 7vh;
         text-align: center;
     }
-    #openURL, #copyURL, #URLanalytics, #longURL {
-        width: 20%;
+    #openURL, #copyURL, #longURL #delete #URLID #URLname{
+        width: 10%;
+    }
+    .urlid{
+        display: none;
     }
 
     footer{

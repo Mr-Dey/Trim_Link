@@ -15,8 +15,8 @@ const {profile}=require('./route/profile.js');
 const {changePassword}=require('./route/changePassword.js')
 const {urlGenerate}=require('./route/urlGenerate');
 const {dashboard}=require('./route/urlGenerate');
-const {trimlink}=require('./route/trimlink')
-
+const {trimlink}=require('./route/trimlink');
+const {deleteURL} = require('./route/deleteURL');
 
 //database url
 const url="mongodb://localhost:27017/trimlink"
@@ -63,16 +63,13 @@ app.use('/dashboard',dashboard);
 app.use('/trimlink',trimlink);
 app.use('/changepassword',changePassword);
 app.use('/profile',profile);
-
+app.use('/deleteurl/',deleteURL);
 
 
 
 //fortest 
-// app.get("/changepassword",(req,res)=>{
-//     res.redirect("https://www.google.com/");
-    // res.render('status',{status:"This is working"});
-    // json=await urlSchema.find({userName:'dona dey'})
-    // res.json(json)
+// app.get("/deleteurl/:code",(req,res)=>{
+//     res.send(req.params.code+" This is it");
 // })
 
 app.listen('3000',()=>{
