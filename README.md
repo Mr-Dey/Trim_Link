@@ -78,12 +78,12 @@ To create a short URL:
 
 ## Mobile view
 
-<img src="sample/mobile0.jpg" alt="mobile view" width="300">
-<img src="sample/mobile1.jpg" alt="mobile view" width="300">
-<img src="sample/mobile2.jpg" alt="mobile view" width="300">
-<img src="sample/mobile3.jpg" alt="mobile view" width="300">
-<img src="sample/mobile4.jpg" alt="mobile view" width="300">
-<img src="sample/mobile5.jpg" alt="mobile view" width="300">
+<img src="sample/mobile0.jpeg" alt="mobile view" width="300">
+<img src="sample/mobile1.jpeg" alt="mobile view" width="300">
+<img src="sample/mobile2.jpeg" alt="mobile view" width="300">
+<img src="sample/mobile3.jpeg" alt="mobile view" width="300">
+<img src="sample/mobile4.jpeg" alt="mobile view" width="300">
+<img src="sample/mobile5.jpeg" alt="mobile view" width="300">
 
 ## Desktop view
 
