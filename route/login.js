@@ -1,11 +1,25 @@
-//From signup to login page
 const express=require('express');
-const path=require('path');
 
-const route=express.Router()
+const home=express.Router()
+const login=express.Router()
+const signup=express.Router()
 
-route.post("/",(req,res)=>{
-    res.sendFile(path.join(__dirname,'..','public','index.html'));
+home.get('/',(req,res)=>{
+    res.render('login');
 })
 
-module.exports=route
+login.get('/',(req,res)=>{
+    res.render('login');
+})
+
+signup.get('/',(req,res)=>{
+    res.render('signup');
+})
+
+
+
+module.exports={
+    login,
+    signup,
+    home
+}

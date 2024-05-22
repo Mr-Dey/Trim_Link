@@ -7,8 +7,10 @@ const hbs=require('hbs');
 require('dotenv').config();
 
 //routes
-const signup=require('./route/signup');
-const login=require('./route/login');
+const {home}=require('./route/login');
+const {signup}=require('./route/login');
+const {login}=require('./route/login');
+
 const adduser=require('./route/adduser');
 const {verifyLogin}=require('./route/verifyLogin');
 const {profile}=require('./route/profile.js');
@@ -31,6 +33,8 @@ mongoose.connect(url)
 })
 
 const app=express()
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 //viewengine
@@ -54,6 +58,7 @@ app.use(session({
 }))
 
 //Handler
+app.use('/',home)
 app.use("/signup",signup);
 app.use("/login",login);
 app.use('/adduser',adduser);
