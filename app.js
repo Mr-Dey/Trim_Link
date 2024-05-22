@@ -21,7 +21,7 @@ const {trimlink}=require('./route/trimlink');
 const {deleteURL} = require('./route/deleteURL');
 
 //database url
-const url="mongodb://localhost:27017/trimlink"
+const url=process.env.TRIMLINK_DB
 mongoose.connect(url)
 
 //to test whether db is connected or not
@@ -34,7 +34,7 @@ mongoose.connect(url)
 
 const app=express()
 
-
+//This makes the css and some logic availabe to acess in there browser. (Public folder for public)
 app.use(express.static(path.join(__dirname, 'public')));
 
 //viewengine
@@ -77,6 +77,8 @@ app.use('/deleteurl/',deleteURL);
 //     res.send(req.params.code+" This is it");
 // })
 
-app.listen('3000',()=>{
+
+const port = process.env.PORT || 3000
+app.listen(port,()=>{
     console.log("Running!");
 })
