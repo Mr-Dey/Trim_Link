@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrimLink</title>
+    <link rel="icon" href="../requirements/logoURL.png" type="icon">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;600;700&display=swap');
+</style>
+<link rel="stylesheet" href="../css/urldetails.css">
+<script defer src="../js/logicCommon.js"></script>
+<script defer src="../js/typedDashboard.js"></script>
+<script defer src="../js/smoothScroll.js"></script>
+
+
+<body>
+    <header>
+        <img src="../requirements/logo.png" alt="appLogo" id="logo">
+        <nav>
+            <ul>
+                <li id="nav_dashboard">Dashbord</li>
+                <li id="LogOut">Logout</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        {{!-- section 2 --}}
+
+        <section class="section2 smooth" id="dashboard">
+            <div id="dashboard_title" class="smooth">
+                <h2>{{urlName}} :Analytics</h2>
+            </div>
+            <div class="table smooth">
+                <table class="smooth">
+                    <thead>
+                        <tr>
+                            <th class="smooth" id="URLname">TIME</th>
+                            <th class="smooth" id="longURL">IP ADDRESS</th>
+                            <th class="smooth urlid" id="URLID">LOCATION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each urlData}}
+                        <tr>
+                            <td>{{this.timeStamp}}</td>
+                            <td>{{this.ip}}</td>
+                            <td>{{this.location}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>TrimLink: Simplifying and shortening your URLs for seamless sharing.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TrimLink. All rights reserved.</p>
+            </div>
+    </footer>
+</body>
+
+</html>

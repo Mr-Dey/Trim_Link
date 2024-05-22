@@ -23,8 +23,17 @@ const urlSchema=mongoose.Schema({
         required:true
     },
     analytics: [{
-        timestamp : {
+        timeStamp : {
             type:Number
+        },
+        ip:{
+            type:String
+        },
+        userAagent:{
+            type:String
+        },
+        location:{
+            type:String
         }
     }]
 },{timestamps:true})

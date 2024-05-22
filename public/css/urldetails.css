@@ -82,118 +82,6 @@ body{
 }
 
 
-/* section1 */
-
-.section1{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: var(--color1);
-    margin: 20vh auto;
-    width: 90vw;
-    border-radius: 1vw;
-    box-shadow: 0 .2vw .5vw rgba(0, 0, 0, 0.2);
-}
-.generate form{
-    margin: 10vh auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.section1 input{
-    width: 10vw;
-    height: 10vh;
-    border: none;
-    background-color: var(--color2);
-    outline: var(--color3) solid .2vw;
-    border-radius: .5vw;
-    padding: 1vh 2vw;
-    margin: 1vh 1vw;
-    font-size: 1vw;
-    transition: all ease-in-out .3s;
-}
-
-.section1 #url{
-    width: 40vw;
-}
-
-.section1 input:hover{
-    scale: 1.02;
-    outline: var(--color2) solid .25vw;
-}
-
-.section1 button{
-    width: 10vw;
-    height: 12vh;
-    border: none;
-    outline: var(--color3) solid .2vw;
-    border-radius: .5vw;
-    padding: 1vh 2vw;
-    margin: 1vh 1vw;
-    font-size: 1vw;
-    transition: all ease-in-out .3s;
-}
-
-.section1 button:hover{
-    color: var(--color4);
-    scale: 1.1;
-    font-size: 1.1vw;
-    outline: var(--color2) solid .25vw;
-}
-
-
-#typed{
-    height: 20vh;
-    margin: 5vh auto;
-    width: 70vw;
-    font-size: 1.5vw;
-    opacity: 70%;
-}
-
-#typed label{
-    color: var(--color4);
-    background-color: var(--color2);
-    padding: .5vh 1vw;
-    border-radius: .5vw;
-    margin: .5vh .2vw;
-}
-
-#typedText{
-    margin: 5vh auto;
-}
-
-#typed .text_highlight{
-    color: var(--color2);
-    background-color: var(--color4);
-}
-
-#typed > div{
-    height: 2vh;
-}
-#typed span{
-    font-weight: bold;
-    color: var(--color2);
-    background-color: var(--color5);
-    padding: .5vh 1vw;
-    border-radius: .5vw;
-    margin: .5vh .2vw;
-}
-
-.copybtn_span{
-    opacity: 0;
-    width: 0vw;
-}
-
-
-hr{
-    margin: 20vh auto;
-    height: 0vh;
-    border:var(--color5) solid .2vh;
-    width: 60vw;
-    opacity: 50%;
-}
-
-
 /* section 2 */
 
 .section2{
@@ -205,8 +93,9 @@ hr{
 }
 
 #dashboard_title{
+    margin-top: 15vh;
     font-size: 2vw;
-    width: 20vw;
+    width: 70vw;
     height: 10vh;
     border-radius: .5vw;
     text-align: center;
@@ -257,20 +146,14 @@ hr{
 }
 
 #longURL{
-    width: 20vw;
+    width: 30vw;
 }
 
 #URLID{
-    width: 10vw;
+    width: 20vw;
 }
 
-#totalClicks{
-    width: 10vw;
-}
 
-#openURL #copyURL #delete #analytics{
-    width: 15vw;
-}
 
 
 .btn{
@@ -401,16 +284,21 @@ footer div{
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 5vw;
+        font-size: 4vw;
         width: 80%;
         height: 10vh;
         border-radius: .5vw;
         text-align: center;
+        white-space: nowrap;
+        overflow: hidden; 
+        text-overflow: ellipsis; 
         background-color: var(--color1);
         color: var(--color5);
         padding: 0vh 2vw;
         box-shadow: 0 .2vw .5vw rgba(0, 0, 0, 0.2);
     }
+
+
     .table {
         display: flex;
         justify-content: center;
@@ -430,12 +318,22 @@ footer div{
         height: 7vh;
         text-align: center;
     }
+    /* #openURL, #copyURL, #longURL #delete #URLID #URLname{
+        width: 20%;
+    } */
 
-    
-
-    .urlid{
-        display: none;
+    #URLname{
+        width: 10vw;
     }
+    
+    #longURL{
+        width: 30vw;
+    }
+    
+    #URLID{
+        width: 50vw;
+    }
+    
 
     footer{
         font-size: 2.5vw;

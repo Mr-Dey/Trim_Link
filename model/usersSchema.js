@@ -22,4 +22,4 @@ const signupSchema=mongoose.Schema({
     }
 })
 
-module.exports=mongoose.model('signupSchema',signupSchema);
+module.exports=mongoose.model('userData',signupSchema);

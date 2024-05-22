@@ -4,6 +4,7 @@ const session = require('express-session');
 const mongoose=require('mongoose');
 const path=require('path');
 const hbs=require('hbs');
+const geoip=require('geoip-lite');
 require('dotenv').config();
 
 //routes
@@ -19,6 +20,7 @@ const {urlGenerate}=require('./route/urlGenerate');
 const {dashboard}=require('./route/urlGenerate');
 const {trimlink}=require('./route/trimlink');
 const {deleteURL} = require('./route/deleteURL');
+const {urlanalytics} = require('./route/urlanalytics');
 
 //database url
 const url=process.env.TRIMLINK_DB
@@ -68,14 +70,17 @@ app.use('/dashboard',dashboard);
 app.use('/trimlink',trimlink);
 app.use('/changepassword',changePassword);
 app.use('/profile',profile);
-app.use('/deleteurl/',deleteURL);
+app.use('/deleteurl',deleteURL);
+app.use('/urlanalytics',urlanalytics);
 
 
 
 //fortest 
-// app.get("/deleteurl/:code",(req,res)=>{
-//     res.send(req.params.code+" This is it");
-// })
+app.get("/test",(req,res)=>{
+    let useragent=req.headers['user-agent'];
+    let device = useragent.match(/Mobile|Android/i)?"Mobile":"Desktop";
+    console.log(device)
+})
 
 
 const port = process.env.PORT || 3000

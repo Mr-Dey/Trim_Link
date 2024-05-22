@@ -1,4 +1,5 @@
 const express=require('express');
+const geoip= require('geoip-lite');
 
 const home=express.Router()
 const login=express.Router()
@@ -15,7 +16,6 @@ login.get('/',(req,res)=>{
 signup.get('/',(req,res)=>{
     res.render('signup');
 })
-
 
 
 module.exports={

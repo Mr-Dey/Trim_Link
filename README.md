@@ -30,8 +30,10 @@ TrimLink is a URL shortener application that allows users to generate short link
     ```bash
     npm install
         "bcrypt": "^5.1.1",
+        "dotenv": "^16.4.5",
         "express": "^4.19.2",
         "express-session": "^1.18.0",
+        "geoip-lite": "^1.4.10",
         "hbs": "^4.2.0",
         "mongoose": "^8.4.0",
         "nodemon": "^3.1.0"
@@ -39,9 +41,9 @@ TrimLink is a URL shortener application that allows users to generate short link
 
 3. Set up your environment variables. Create a `.env` file in the root directory and add the following:
     ```env
+    HOST="http://localhost:3000/"
     PORT=3000
-    MONGO_URI=your_mongodb_connection_string
-    SESSION_SECRET=your_secret_key / secret in this project.
+    TRIMLINK_DB="mongodb://localhost:27017/trimlink"
     ```
 
 4. Start the application:

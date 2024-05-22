@@ -11,7 +11,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;600;700&display=swap');
 </style>
 <link rel="stylesheet" href="css/dashboard.css">
-{{!-- <script defer src="./js/signup.js"></script> --}}
 <script defer src="./js/typedDashboard.js"></script>
 <script defer src="./js/logicDashboard.js"></script>
 <script defer src="./js/smoothScroll.js"></script>
@@ -36,7 +35,7 @@
             <div class="generate">
                 <form action="/generate" method="post" id="generateForm">
                     <input id="url" type="text" placeholder="Enter / paste your URL here." name="url" required>
-                    <input type="text" placeholder="Enter a Name." name="urlName" required>
+                    <input type="text" placeholder="Enter a Name." name="urlName" required maxlength="10">
                     <button type="submit">Generate</button>
                 </form>
             </div>
@@ -69,6 +68,7 @@
                             <th class="smooth" id="openURL">Redirect</th>
                             <th class="smooth" id="copyURL">Copy</th>
                             <th class="smooth" id="delete">Delete</th>
+                            <th class="smooth" id="analytics"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -100,6 +100,14 @@
                                 <div class="btn deletebtn">
                                     <a href='/deleteurl/{{this.shortId}}'>
                                         <div>Delete</div>
+                                    </a>
+                                </div>
+    
+                            </td>
+                            <td>
+                                <div class="btn urlanalyticsbtn">
+                                    <a href='/urlanalytics/{{this.shortId}}'>
+                                        <div>></div>
                                     </a>
                                 </div>
     
