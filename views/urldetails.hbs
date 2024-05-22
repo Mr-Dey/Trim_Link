@@ -32,7 +32,7 @@
 
         <section class="section2 smooth" id="dashboard">
             <div id="dashboard_title" class="smooth">
-                <h2>{{urlName}} :Analytics</h2>
+                <h2>TrimLink > {{urlName}}</h2>
             </div>
             <div class="table smooth">
                 <table class="smooth">
@@ -40,15 +40,17 @@
                         <tr>
                             <th class="smooth" id="URLname">TIME</th>
                             <th class="smooth" id="longURL">IP ADDRESS</th>
-                            <th class="smooth urlid" id="URLID">LOCATION</th>
+                            <th class="smooth urlid" id="URLID">LOCATION & DEVICE </th>
+                            <th class="smooth urlid" id="Device">BROWSER</th>
                         </tr>
                     </thead>
                     <tbody>
                         {{#each urlData}}
                         <tr>
-                            <td>{{this.timeStamp}}</td>
+                            <td class="time">{{this.timeStamp}}</td>
                             <td>{{this.ip}}</td>
                             <td>{{this.location}}</td>
+                            <td>{{this.userAgent}}</td>
                         </tr>
                         {{/each}}
                     </tbody>

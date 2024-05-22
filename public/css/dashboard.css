@@ -242,7 +242,7 @@ hr{
 
 
 .table td{
-    max-width: 2vw;
+    max-width: 10vw;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -274,6 +274,7 @@ hr{
 
 
 .btn{
+    width: 5vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -311,18 +312,21 @@ footer div{
 /* responsive */
 
 
-
 @media only screen and (max-width: 768px){
     #logo{
         width: 15vh;
     }
 
     nav li{
-    text-align: center;
-    width: 13vw;
-    font-size: 2.5vw;
-    background-color: var(--color5);
-    color: var(--color2);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 13vw;
+        height: 3vh;
+        font-size: 2.5vw;
+        background-color: var(--color5);
+        color: var(--color2);
     }
     .generate{
         width: 100%;
@@ -431,6 +435,9 @@ footer div{
         text-align: center;
     }
 
+    .btn{
+        width: 10vw;
+    }
     
 
     .urlid{

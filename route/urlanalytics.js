@@ -7,6 +7,8 @@ urlanalytics.get('/:code',async (req,res)=>{
     if(user){
         let data = user.urlSchema.find(url=> url.shortId === req.params.code);
         res.render('urldetails',{urlName:data.redirectURLName,urlData:data.analytics})
+    }else{
+        res.redirect('/')
     }
 })
 

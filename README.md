@@ -82,6 +82,8 @@ To create a short URL:
 <img src="sample/mobile1.jpg" alt="mobile view" width="300">
 <img src="sample/mobile2.jpg" alt="mobile view" width="300">
 <img src="sample/mobile3.jpg" alt="mobile view" width="300">
+<img src="sample/mobile4.jpg" alt="mobile view" width="300">
+<img src="sample/mobile5.jpg" alt="mobile view" width="300">
 
 ## Desktop view
 
@@ -89,6 +91,8 @@ To create a short URL:
 <img src="sample/desktop1.png" alt="mobile view" width="600">
 <img src="sample/desktop2.png" alt="mobile view" width="600">
 <img src="sample/desktop3.png" alt="mobile view" width="600">
+<img src="sample/desktop4.png" alt="mobile view" width="600">
+<img src="sample/desktop5.png" alt="mobile view" width="600">
 
 
 

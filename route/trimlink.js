@@ -24,7 +24,7 @@ trimlink.get('/:userId/:shortid',async(req,res)=>{
             let usaip = "91.245.252.9"
             let germanyip = "146.70.82.206"
         
-            let locationData = geoip.lookup(japanip);
+            let locationData = geoip.lookup(germanyip);
             // let locationData = geoip.lookup(req.ip);
             let location = `${locationData.city} ${locationData.country} ${locationData.timezone} ${device}`
 
@@ -35,7 +35,7 @@ trimlink.get('/:userId/:shortid',async(req,res)=>{
                 $push:{
                     "urlSchema.$.analytics":{
                         timeStamp : formattedTime,
-                        ip:japanip,
+                        ip:germanyip,
                         // ip:req.ip,
                         userAgent:req.headers['user-agent'],
 
@@ -43,7 +43,6 @@ trimlink.get('/:userId/:shortid',async(req,res)=>{
                     }
                 }
             })
-            console.log("this is working from trimlink");
             let data=result.urlSchema.find(id=> id.shortId===req.params.shortid);
             res.redirect(data.redirectURL);
         }
