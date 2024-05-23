@@ -332,27 +332,35 @@ footer div{
         width: 95%;
         height: 7vh;
         text-align: center;
+        overflow-x: auto;
     }
-    /* #openURL, #copyURL, #longURL #delete #URLID #URLname{
-        width: 20%;
-    } */
+
+    .table td{
+        width: 1vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .time{
+        width: 1vw;
+    }
 
     #URLname{
-        width: 5vw;
+        max-width: 4vw;
     }
     
     #longURL{
-        width: 10vw;
+        max-width: 10vw;
     }
     
     #URLID{
         width: 20vw;
     }
     #Device{
-        width: 15vw;
+        max-width: 5vw;
     }
-    
-
+ 
     footer{
         font-size: 2.5vw;
     }
