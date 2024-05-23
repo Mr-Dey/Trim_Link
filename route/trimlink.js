@@ -24,9 +24,16 @@ trimlink.get('/:userId/:shortid',async(req,res)=>{
             let usaip = "91.245.252.9"
             let germanyip = "146.70.82.206"
         
-            let locationData = geoip.lookup(germanyip);
+            let locationData = geoip.lookup(japanip);
             // let locationData = geoip.lookup(req.ip);
-            let location = `${locationData.city} ${locationData.country} ${locationData.timezone} ${device}`
+
+            //default
+            let location = `- ${device}`
+            try{
+                location = `${locationData.city} ${locationData.country} ${locationData.timezone} ${device}`
+            }catch(e){
+                console.log(e)
+            }
 
             const result = await userSchema.findOneAndUpdate({
                 name:user.name,
@@ -35,7 +42,7 @@ trimlink.get('/:userId/:shortid',async(req,res)=>{
                 $push:{
                     "urlSchema.$.analytics":{
                         timeStamp : formattedTime,
-                        ip:germanyip,
+                        ip:japanip,
                         // ip:req.ip,
                         userAgent:req.headers['user-agent'],
 
