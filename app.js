@@ -78,11 +78,9 @@ app.use('/urlanalytics',urlanalytics);
 
 
 //fortest 
-app.get("/test",(req,res)=>{
-    let useragent=req.headers['user-agent'];
-    let device = useragent.match(/Mobile|Android/i)?"Mobile":"Desktop";
-    console.log(device)
-})
+// app.get("/test",(req,res)=>{
+//     res.status(500);
+// })
 
 
 const port = process.env.PORT || 3000
