@@ -57,7 +57,13 @@ app.use(express.urlencoded({extended:false}));
 app.use(session({
     secret:'secret-key',
     resave:false,
-    saveUninitialized:false
+    saveUninitialized:false,
+    cookie:{
+        //The life of this cookie will be 1 hour.
+        maxAge: 1000 * 60 * 60, 
+        secure: false,
+        httpOnly: true
+    }
 }))
 
 //Handler
