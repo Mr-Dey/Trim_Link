@@ -15,7 +15,7 @@ changePassword.post('/',async(req,res)=>{
 
             const result= await userSchema.findOneAndUpdate({name:req.session.userName},
             {password:hasedPassword},
-                {new:true})
+                {new:true})//it will return the updated document rather the old non updated document.
             if(result){
                 res.render('status',{status:"Password Updated !"});
             }else{
