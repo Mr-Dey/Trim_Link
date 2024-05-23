@@ -2,7 +2,7 @@
 const logout = document.querySelector('#LogOut');
 logout.addEventListener('click',(e)=>{
     e.preventDefault();
-    window.location.href="/";
+    window.location.href="/logout";
 })
 //Dashboard
 const navToDashboard = document.querySelector('#nav_dashboard');

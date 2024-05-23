@@ -11,6 +11,7 @@ require('dotenv').config();
 const {home}=require('./route/login');
 const {signup}=require('./route/login');
 const {login}=require('./route/login');
+const {logout}=require('./route/logout');
 
 const adduser=require('./route/adduser');
 const {verifyLogin}=require('./route/verifyLogin');
@@ -65,6 +66,7 @@ app.use("/signup",signup);
 app.use("/login",login);
 app.use('/adduser',adduser);
 app.use('/verifyLogin',verifyLogin);
+app.use('/logout',logout);
 app.use('/generate',urlGenerate);
 app.use('/dashboard',dashboard);
 app.use('/trimlink',trimlink);
