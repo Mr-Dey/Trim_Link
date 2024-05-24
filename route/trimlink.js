@@ -52,9 +52,12 @@ trimlink.get('/:userId/:shortid',async(req,res)=>{
             })
             let data=result.urlSchema.find(id=> id.shortId===req.params.shortid);
             res.redirect(data.redirectURL);
+        }else{
+            res.render('status',{status:"Url or user not found!"});
         }
     }catch(e){
         console.log("error here in trimlink\n"+e);
+        res.render('status',{status:"TrimLink not found!"});
     }
 })
 

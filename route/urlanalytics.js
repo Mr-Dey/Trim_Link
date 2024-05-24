@@ -9,7 +9,7 @@ urlanalytics.get('/:code',async (req,res)=>{
         res.render('urldetails',{urlName:data.redirectURLName,urlData:data.analytics})
     }else{
         console.log(`user ${req.session.userName} doesnot have any url with this -> ${req.params.code} short id\n`);
-        res.redirect('/')
+        res.render('status',{status:"Link not found!"});
     }
 })
 

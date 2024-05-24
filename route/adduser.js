@@ -19,6 +19,7 @@ adduser.post("/",async(req,res)=>{
         password:hasedPassword
     })
     try{
+        //Because every email and username must be unique which is mentoion in userSchema i dont need to check here.
         let result=await addData.save();
         res.render('status',{status:"Sign-up successful! Please proceed to log in."});
         console.log(result);

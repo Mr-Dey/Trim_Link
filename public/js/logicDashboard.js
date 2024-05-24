@@ -45,7 +45,7 @@ copyBtns.forEach((btn)=>{
         }catch(e){
             console.log(e);
         }
-        document.removeChild=text
+        document.body.removeChild(text);
 
         btn.textContent="Copied";
     })
