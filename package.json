@@ -23,7 +23,6 @@
     "express-session": "^1.18.0",
     "geoip-lite": "^1.4.10",
     "hbs": "^4.2.0",
-    "mongoose": "^8.4.0",
-    "nodemon": "^3.1.0"
+    "mongoose": "^8.4.0"
   }
 }
