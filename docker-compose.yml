@@ -1,0 +1,10 @@
+# version: '3.8'
+# services:
+#   image: trimlink:1.0
+#   container_name: trimlinkapp
+#   ports:
+#     - "3000:3000"
+#   environment:
+#     - HOST="http://localhost:3000/"
+#     - PORT=3000
+#     - TRIMLINK_DB="mongodb://localhost:27017/trimlink"
