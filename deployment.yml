@@ -15,6 +15,11 @@ spec:
       containers:
       - name: trimlink-app
         image: mrdey/trimlink:1.1
+      env:
+        - name:  DB_HOST
+          value: "service-mongodb"
+        - name: DB_PORT
+          value: "27017"
 
 
 #service
