@@ -7,7 +7,7 @@ const generateIDfunc=require('../controllers/generateID');
 
 
 //from root directory .env
-const host=process.env.HOST;
+const host=`http://${process.env.HOST}:${process.env.PORT}/`;
 
 urlGenerate.post ('/',async(req,res)=>{
    try{
@@ -32,6 +32,7 @@ urlGenerate.post ('/',async(req,res)=>{
                console.log('UniqeID generated '+shortId);
             }
             const trimLink=`${host}trimlink/${user.name}/${shortId}`;
+
             console.log('TrimLink generated'+trimLink);
    
             //creting an urlSchema

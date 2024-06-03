@@ -24,7 +24,9 @@ const {deleteURL} = require('./route/deleteURL');
 const {urlanalytics} = require('./route/urlanalytics');
 
 //database url
-const url=process.env.TRIMLINK_DB
+// const url=process.env.TRIMLINK_DB
+const url=`mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/trimlink`
+
 mongoose.connect(url)
 
 //to test whether db is connected or not
