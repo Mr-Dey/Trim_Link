@@ -29,4 +29,14 @@ adduser.post("/",async(req,res)=>{
         }
     }
 })
+
+
+// used this to Test will update later
+// adduser.put('/:id',async(req,res)=>{
+//     const id = req.params.id;
+//     const result = await userSchema.findByIdAndUpdate(id,req.body,{new:true})
+//     res.json(result);
+// })
+
+
 module.exports=adduser;
